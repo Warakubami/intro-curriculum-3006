@@ -1,8 +1,8 @@
 'use strict';
 module.exports = (robot) => {
-	robot.hear(/hello>/i, (msg) => {
-		const username = msg.message.user.name;
-		msg.send('Hello, ' + username);
+	robot.hear(/こんにちは/i, (msg) => {
+		const user_id = msg.message.user.name;
+		msg.send(`こんにちは, <@${user_id}>`);
 	});
 
 	robot.hear(/おみくじ/i, msg => {
